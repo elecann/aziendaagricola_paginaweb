@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Azienda agricola Cannata</title>
+    <link rel="stylesheet" href="sito.css">
+</head>
+
+    <header>
+    <img id="header" src="images/onda.jpg" />
+    <h1>Azienda agricola Cannata</h1>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#prodotti">Prodotti</a></li>
+            <li><a href="#impegno">Impegno</a></li>
+            <li><a href="#storia">Su di noi</a></li>
+            <li><a href="#posizione">Posizione</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="dropdown">
+    
+    <div class="tendina" onclick="toggleDropdown()">
+        &#9776; <!-- 3 linee -->
+    </div>
+    <div id="dropdown-content" class="dropdown-content">
+        <a href="#prodotti">Prodotti</a>
+        <a href="#sostenibilità">Sostenibilità</a>
+        <a href="#innovazione">Innovazione</a>
+        <a href="#posizione">Posizione</a>
+    </div>
+</div>
+    <body>
+        <div>
+            <img id="profilo" src="images/IMG_2934.JPG" />
+
+        </div>
+        <div id="testo">
+            L'azionda agricola Cannata predilige la qualità del prodotto non trascurandone nessun aspetto.
+            Il titolare Gaetano Cannata si occupa di persona di ciascun prodotto, seguendone tutto lo sviluppo, 
+            dalla nascita del fiore alla sua raccolta. 
+        </div>
+        <div id="gallery-container">
+            <div id="gallery">
+                <img class="singolo" src="images/logo.PNG">
+                <img class="singolo" src="images/p1.jpeg">
+                <img class="singolo" src="images/p5.jpeg">
+                <img class="singolo" src="images/IMG_2934.JPG">
+                <img class="singolo" src="images/IMG_2951.JPG">
+                <img class="singolo" src="images/IMG_2965.JPG">
+            </div>
+            <button id="prev-btn" class="gallery-btn">&#10094;</button>
+            <button id="next-btn" class="gallery-btn">&#10095;</button>
+        </div>
+        <div id="proloquio">
+            L'azionda agricola Cannata predilige la qualità del prodotto non trascurandone nessun aspetto.
+            Il titolare Gaetano Cannata si occupa di persona di ciascun prodotto, seguendone tutto lo sviluppo, dalla nascita del fiore alla sua raccolta
+        </div>
+
+        <section id="prodotti">
+            <div class="descrizione-prodotto"><h3>Prodotti</h3></div>
+            <div class="scheda-prodotto">
+            <img class="prodotto" src="images/peperoni.jpg" />
+            <div class="descrizione-prodotto">
+                <h3>I Nostri Peperoni</h3>
+                <p>Coltivati con cura sotto il sole della Sicilia, i nostri peperoni sono croccanti e ricchi di sapore. Seguiamo ogni fase, dalla semina alla raccolta manuale.</p>
+            </div>
+        </div>
+
+        <div class="scheda-prodotto">
+            <img class="prodotto" src="images/pomodoro.jpg" />
+            <div class="descrizione-prodotto">
+                <h3>Pomodoro di Qualità</h3>
+                <p>Il vero gusto del pomodoro siciliano. Perfetto per sughi freschi o insalate, raccolto al punto giusto di maturazione per garantire il massimo dei nutrienti.</p>
+            </div>
+        </div>
+    </section>
+
+ <section id="impegno">
+        <div class="descrizione-lavoro">
+        <h3>Il nostro lavoro</h3>
+        <p>Ci impegniamo a preservare la genuinità dei nostri prodotti per i nostri clienti, prestiamo molta attenzione alla struttura e alle innovazioni, utilizzando l'avanzamento scientifico per migliorare sempre più i nostri processi.</p>
+    </div>
+    <div class="icone-impegno-container">
+        <div class="icona-item">
+            <img src="images/inizio.jpg" alt="Inizio">
+            <div class="overlay-testo">Impegno</div>
+        </div>
+
+        <div class="icona-item">
+            <img src="images/attenzione.jpg" alt="Attenzione">
+            <div class="overlay-testo">Attenzione</div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="su di noi">
+        <div class="descrizione-lavoro">
+        <h3>La nostra Storia</h3>
+        <p>Le nostre terre sono coltivate da noi da ben 3 generazioni</p>
+    </div>
+    </section>
+
+    <section id="posizione">
+        <h3>Dove trovarci</h3>
+        <div class="mappa-container">
+            <iframe src="https://www.google.com/maps/embed?..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+        <section id="contatti">
+            <h2>Contatti</h2>
+            <div class="contatti-container">
+                <div class="contatto-item">
+                    <span>📞</span>
+                    <p>+39 123 456 7890</p>
+                </div>
+                <div class="contatto-item">
+                    <span>📧mail <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fe5805ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>Pec</span>
+                    <p>info@cannataagricola.it</p>
+                    <p>gaetanocannata@pec.it</p>
+                </div>
+                <div class="contatto-item">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-insta"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>instagram</span>
+                    <p>gaetanocannata@pec.it</p>
+                </div>
+                <div class="contatto-item">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>linkedin</span>
+                    <p>aziendaagricolacannata</p>
+                </div>
+            </div>
+        </section>
+        </main>
+<footer>
+    <div id="footer-legal-bar">
+        <div class="legal-info">
+            <strong>Azienda Agricola Cannata di Gaetano Cannata</strong><br>
+            Sede Legale: Via delle Coltivazioni, 123 - 97019 Vittoria (RG)<br>
+            P.IVA: 01234567890 | PEC: aziendaagricolacannata@pec.it
+        </div>
+        <div class="legal-links">
+            <p>© 2026 Tutti i diritti riservati</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
+        </div>
+    </div>
+</footer>
+
+        <script src="java.js"></script>
+    </body>
+</html>
