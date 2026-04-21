@@ -246,7 +246,7 @@ body.show-menu #dropdown {
 /* --- 6. PRODOTTI --- */
 
 #prodotti {
-    padding: 50px 30px;
+    padding: 5px 30px;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -440,59 +440,167 @@ footer { width: 100%; margin-top: 40px; }
 }
 .legal-links a { color: white; text-decoration: none; font-weight: bold; }
 
-/* --- 11. MEDIA QUERIES (MOBILE) --- */
+
+/* --- 11. MEDIA QUERIES (MOBILE - RE-STYLE) --- */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
-        top: 60%;
-        background-color: transparent;
+    
+body {
+    font-family:unset;
+}
+#testo{
+    line-height: 1.4;
+    font-display:initial;
+    font-family:serif;
+    padding:23px;
+    margin-bottom: 0%;
+}
+/* --- 2. HEADER E NAVBAR PRINCIPALE --- */
+header {
+    height: 50%;
+}
+
+#navbar ul {
+    padding: 10px;
+}
+
+#navbar li {
+    margin: 0 7px;
+}
+
+#navbar a {
+    font-weight:normal ;
+}
+
+    /* 2. Profilo: Ridotto per non "affogare" la storia */
+    #profilo { 
+        width: 150px; 
+        margin: 50px auto 15px auto; 
     }
 
-    #header { max-height: 250px; }
-    #profilo { width: 60%; }
+    /* 3. Hamburger Menu: "Mega" ma con stile */
+    /* Usiamo l'ID per essere sicuri che lo prenda */
+    #dropdown .tendina {
+        padding: 15px 15px !important; /* Largo ma non troppo alto */
+       
+        border-radius: 15px;
+    }
+     #dropdown { top: 20px; right: 10x; }
 
+     /* --- 2. MODIFICA GALLERY (COMPATTA) --- */
     #gallery-container {
-        height: 350px !important;
-        margin: 20px auto !important;
+        width: 100%; /* Più stretta per non occupare tutto lo schermo */
+        height: 320px;    /* Altezza ridotta rispetto al desktop */
+        margin: 10px 0px;
     }
 
-    #gallery { height: 100%; }
+    .singolo {
+        width: 90%;       /* L'immagine attiva occupa bene il centro */
+        height: 60%;    /* Altezza proporzionata */
+        border-radius: 12px;
+    }
 
+    /* Effetto 3D semplificato: nascondiamo le laterali per pulizia visiva */
     .singolo.prev, .singolo.next {
-        display: none;
-    }
-    
-    .singolo.active {
-        width: 100% !important;
-        position: relative;
-        left: 0 !important;
-        transform: none !important;
-    }
-    
-    #gallery-container {
-        height: auto;
-        perspective: none;
+        display: none; 
     }
 
-    .scheda-prodotto { flex-direction: column; text-align: center; }
-    .prodotto { width: 100%; height: auto; max-width: 250px; }
-    
+    .singolo.active {
+        
+        transform: translateX(-50%) scale(1.05);
+        opacity: 1;
+        filter: brightness(1) blur(0px);
+    }
+
+    .gallery-btn {
+        padding: 10px;
+        font-size: 12px;
+
+    }
+
+
+    .scheda-prodotto { 
+        flex-direction:column !important; /* Forza l'immagine a stare a lato */
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        margin-bottom: 15px;
+        text-align: left; /* Testo a sinistra accanto alla foto */
+    }
+
+    .prodotto { 
+        width: 200px !important; /* Dimensione ridotta per stare a lato */
+        height: 240px !important; 
+        object-fit:cover;
+        border-radius: 10px;
+        /* Impedisce alla foto di rimpicciolirsi troppo */
+    }
+
+    .descrizione-prodotto h3 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        text-align:center;
+    }
+
+    .descrizione-prodotto p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        text-align:center;
+    }
+
+     /* 3. CONTATTI: A due a due (Due Colonne) */
+    .contatti-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important; /* Due colonne */
+        gap: 4px;
+        padding: 10px;
+    }
+
+    .contatto-card {
+        padding: 6px 6px;
+        border-radius: 12px;
+    }
+
+   
+
+    .contatto-card p {
+        font-size: 0.6rem;
+    }
+    .icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    /* 4. Numeri di Telefono con BORDATURA ARANCIONE */
     .contatto-card a[href^="tel"] {
-        display: inline-block;
-        background-color: #fe5805ef;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-top: 10px;
+        display: block;
+        border: 2px solid #fe5805ef; /* La bordatura che ti piace */
+        color: #fe5805ef;
+        padding: 5px;
+        border-radius: 6px;
+        margin-top: 5px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* 5. Sezione Impegno (Già ti piaceva, la manteniamo compatta) */
+    .icona-item {
+        width: 160px !important; 
+        height: 160px !important;
     }
     
-    .mappa-container iframe {
-        pointer-events: none;
+    .icone-impegno-container { gap: 15px; }
+
+    /* Titoli sezioni rimpiccioliti */
+    #contatti h2, #impegno h3, #storia h3, #posizione h3, #prodotti h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
     }
+
     
-    .mappa-container.active iframe {
-        pointer-events: auto;
+    /* 7. Footer */
+    #footer-legal-bar { 
+        padding: 30px 15px;
+        font-size: 0.8rem;
     }
-    
-    #footer-legal-bar { flex-direction: column; text-align: center; }
 }
