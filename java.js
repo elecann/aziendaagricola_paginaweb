@@ -20,8 +20,7 @@ document.addEventListener('scroll', function () {
 
 // 1. Gestione della tendina (Hamburger)
 function toggleDropdown(event) {
-    // Impedisce al click di propagarsi al resto della pagina
-    if (event) event.stopPropagation();
+    if (event) event.stopPropagation(); // Questo ferma il "rimbalzo" del click
     
     const content = document.getElementById("dropdown-content");
     if (content) {
@@ -29,19 +28,20 @@ function toggleDropdown(event) {
     }
 }
 
-// 2. Chiusura sicura cliccando fuori
+// Gestione della chiusura sicura del menu
 document.addEventListener('click', function(event) {
     const dropdown = document.getElementById("dropdown");
-    const content = document.getElementById("dropdown-content");
+    const dropdownContent = document.getElementById("dropdown-content");
 
-    // Verifica che gli elementi esistano prima di procedere (evita l'errore 'null')
-    if (!dropdown || !content) return;
-
-    // Se il menu è aperto e clicchi fuori, chiudilo
-    if (content.classList.contains('show') && !dropdown.contains(event.target)) {
-        content.classList.remove("show");
+    // Controlliamo che entrambi gli elementi esistano prima di agire
+    if (dropdown && dropdownContent) {
+        // Se il menu è aperto e il click è avvenuto fuori dal contenitore dropdown
+        if (dropdownContent.classList.contains('show') && !dropdown.contains(event.target)) {
+            dropdownContent.classList.remove("show");
+        }
     }
 });
+
 //galleria
 document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.singolo');

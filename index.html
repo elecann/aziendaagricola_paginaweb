@@ -7,13 +7,13 @@
 </head>
 
     <header>
-    <img id="header" src="images/sfondo.png" />
-    <h1>Azienda agricola Cannata</h1>
+    <img id="header" src="images/fine.jpeg" />
+    <h1></h1>
     <nav id="navbar">
         <ul>
             <li><a href="#prodotti">Prodotti</a></li>
             <li><a href="#impegno">Impegno</a></li>
-            <li><a href="#storia">Su di noi</a></li>
+            <li><a href="#storia">Storia</a></li>
             <li><a href="#posizione">Posizione</a></li>
             <li><a href="#contatti">Contatti</a></li>
         </ul>
@@ -21,173 +21,346 @@
 </header>
 <div id="dropdown">
     
-    <div class="tendina" onclick="toggleDropdown()">
+    <div class="tendina" onclick="toggleDropdown(event)">
         &#9776; <!-- 3 linee -->
     </div>
     <div id="dropdown-content" class="dropdown-content">
         <a href="#prodotti">Prodotti</a>
-        <a href="#sostenibilità">Sostenibilità</a>
-        <a href="#innovazione">Innovazione</a>
+        <a href="#storia">Storia</a>
+        <a href="#impegno">Innovazione</a>
         <a href="#posizione">Posizione</a>
+        <a href="#contatti">Contatti</a>
     </div>
 </div>
+
     <body>
+
         <div>
+
             <img id="profilo" src="images/insieme.jpg" />
 
+
+
         </div>
+
+        <section id="storia">
+
         <div id="testo">
-            L'azionda agricola Cannata predilige la qualità del prodotto non trascurandone nessun aspetto.
-            Il titolare Gaetano Cannata si occupa di persona di ciascun prodotto, seguendone tutto lo sviluppo, 
-            dalla nascita del fiore alla sua raccolta. 
-        </div>
+
+        <div class="titolo-sezione">
+    <span>Dal 1978</span>
+    <h3>La nostra storia</h3>
+</div>
+
+La nostra azienda affonda le sue radici nel 1978, con il fondatore Rosario Cannata, che ha dato inizio a questo percorso costruito sul lavoro e
+
+sulla concretezza. Con Gaetano Cannata l’azienda ha vissuto una fase di crescita ed espansione, sviluppando le strutture e rafforzando
+
+l’organizzazione produttiva, sempre mantenendo un approccio diretto e attento alla coltivazione. Oggi, con l’ingresso dei figli, si apre una nuova fase,
+
+fatta di continuità ma anche di rinnovamento. L’esperienza maturata negli anni si unisce a nuove competenze e a una visione orientata al miglioramento costante.
+
+Quello che non cambia è il modo di lavorare: presenza quotidiana in serra, cura dei dettagli e attenzione alla qualità, con l’obiettivo di portare avanti un’azienda
+
+solida, costruita nel tempo e pronta a crescere ancora.
+
+        </div> </section>
+
+
+
         <div id="gallery-container">
+
             <div id="gallery">
+
                 <img class="singolo" src="images/logo.png">
+
                 <img class="singolo" src="images/insieme.jpg">
+
                 <img class="singolo" src="images/pomodoro_singolo.jpg">
-                <img class="singolo" src="images/peperone_verde.jpg">
+
+                <img class="singolo" src="images/peperone_verde1.jpg">
+
                 <img class="singolo" src="images/pomodori_rossi.jpg">
+
                 <img class="singolo" src="images/r.jpg">
-                <img class="singolo" src="images/pomodoro_colorato.jpg"> 
+
+                <img class="singolo" src="images/pomodoro_colorato.jpg">
+
                 <img class="singolo" src="images/pomodoro_giallo.jpg">
+
                 <img class="singolo" src="images/pomodoro3.jpg">
+
                 <img class="singolo" src="images/peperoni.jpg">
+
             </div>
+
             <button id="prev-btn" class="gallery-btn">&#10094;</button>
+
             <button id="next-btn" class="gallery-btn">&#10095;</button>
-        </div>
-        <div id="proloquio">
-            L'azionda agricola Cannata predilige la qualità del prodotto non trascurandone nessun aspetto.
-            Il titolare Gaetano Cannata si occupa di persona di ciascun prodotto, seguendone tutto lo sviluppo, dalla nascita del fiore alla sua raccolta
+
         </div>
 
-        <section id="prodotti">
-            <div class="descrizione-prodotto"><h3>Prodotti</h3></div>
-            <div class="scheda-prodotto">
-            <img class="prodotto" src="images/peperone_scuro.jpg" />
-            <div class="descrizione-prodotto">
-                <h3>Peperone rosso</h3>
-                <p>Coltivati con cura sotto il sole della Sicilia, i nostri peperoni sono croccanti e ricchi di sapore. Seguiamo ogni fase, dalla semina alla raccolta manuale.</p>
-            </div>
-        </div>
-
-        <div class="scheda-prodotto">
-            <img class="prodotto" src="images/peperone_chiaro.jpg" />
-            <div class="descrizione-prodotto">
-                <h3>Peperone giallo</h3>
-                <p>Il vero gusto del pomodoro siciliano. Perfetto per sughi freschi o insalate, raccolto al punto giusto di maturazione per garantire il massimo dei nutrienti.</p>
-            </div>
-        </div>
-
-        <div class="scheda-prodotto">
-            <img class="prodotto" src="images/cornetto.jpg" />
-            <div class="descrizione-prodotto">
-                <h3>Peperone cornetto giallo</h3>
-                <p>Il vero gusto del pomodoro siciliano. Perfetto per sughi freschi o insalate, raccolto al punto giusto di maturazione per garantire il massimo dei nutrienti.</p>
-            </div>
-        </div>
-
-        <div class="scheda-prodotto">
-            <img class="prodotto" src="images/pomodoro.jpg" />
-            <div class="descrizione-prodotto">
-                <h3>Pomodoro di Qualità</h3>
-                <p>Il vero gusto del pomodoro siciliano. Perfetto per sughi freschi o insalate, raccolto al punto giusto di maturazione per garantire il massimo dei nutrienti.</p>
-            </div>
-        </div>
-
-        <div class="scheda-prodotto">
-            <img class="prodotto" src="images/ciliegino_giallo.jpg" />
-            <div class="descrizione-prodotto">
-                <h3>Ciliegino giallo</h3>
-                <p>Il vero gusto del pomodoro siciliano. Perfetto per sughi freschi o insalate, raccolto al punto giusto di maturazione per garantire il massimo dei nutrienti.</p>
-            </div>
-        </div>
-
-        <div class="scheda-prodotto">
-            <img class="prodotto" src="images/datterino.jpg" />
-            <div class="descrizione-prodotto">
-                <h3>Pomodoro datterino </h3>
-                <p>Il vero gusto del pomodoro siciliano. Perfetto per sughi freschi o insalate, raccolto al punto giusto di maturazione per garantire il massimo dei nutrienti.</p>
-            </div>
-        </div>
 
     
+        <section id="prodotti">
+
+            <div class="titolo-sezione">
+        <span>Dalla terra alla tavola</span>
+        <h3>I prodotti che coltiviamo</h3>
+    </div>
+
+            <div class="scheda-prodotto">
+
+            <img class="prodotto" src="images/peperone_scuro.jpg" />
+
+            <div class="descrizione-prodotto">
+
+                <h3>Peperone rosso</h3>
+
+                <p>Coltiviamo il peperone rosso in serra con attenzione e continuità,
+
+                    per ottenere frutti uniformi, consistenti. E' il risultato di un lavoro quotidiano fatto di cura,
+
+                    equilibrio e ricerca costante della qualità.</p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="scheda-prodotto">
+
+            <img class="prodotto" src="images/peperone_chiaro.jpg" />
+
+            <div class="descrizione-prodotto">
+
+                <h3>Peperone giallo</h3>
+
+                <p>Coltivando il nostro peperone giallo in serra valorizziamo le sue caratteristiche naturali, polpa più dolce,
+
+                    sapore più delicato e una buona croccantezza. </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="scheda-prodotto">
+
+            <img class="prodotto" src="images/pomodoro.jpg" />
+
+            <div class="descrizione-prodotto">
+
+                <h3>Pomodoro ciliegino</h3>
+
+                <p>Il pomodoro ciliegino si caraterizza per una buccia spessa e croccante che dà struttura al frutto migliorandone la tenuta nel tempo.
+
+                    All'interno mantiene una polpa succosa con un gusto dolce, fresco e piacevole.</p>
+
+            </div>
+
+        </div>
+
+       
+
+        <div class="scheda-prodotto">
+
+            <img class="prodotto" src="images/datterino.jpg" />
+
+            <div class="descrizione-prodotto">
+
+                <h3>Pomodoro datterino </h3>
+
+                <p>Il nostro pomodoro datterino rosso si distingue per la spiccata dolcezza con un profilo aromatico pieno. In serra ci impegnamo
+
+                    ad esaltare queste caratteristiche, ottenendo un prodotto intenso e riconoscibile.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="scheda-prodotto">
+
+            <img class="prodotto" src="images/ciliegino_giallo.jpg" />
+
+            <div class="descrizione-prodotto">
+
+                <h3>Pomodoro datterino giallo</h3>
+
+                <p>Il nostro datterino giallo si distingue per un dolcezza più delicata dove emergono note aromatiche leggere e fini. Parliamo di un frutto
+
+                    con polpa compatta che riesce a mantenere una buona consistenza, coltivate in serra con attenzione per preservare la stabilità e la
+
+                    qualità nel tempo.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+   
+
     </section>
 
+
+
  <section id="impegno">
+
         <div class="descrizione-lavoro">
+
         <h3>Il nostro lavoro</h3>
+
         <p>Ci impegniamo a preservare la genuinità dei nostri prodotti per i nostri clienti, prestiamo molta attenzione alla struttura e alle innovazioni, utilizzando l'avanzamento scientifico per migliorare sempre più i nostri processi.</p>
+
     </div>
+
     <div class="icone-impegno-container">
-        <div class="icona-item">
-            <img src="images/inizio.jpg" alt="Inizio">
-            <div class="overlay-testo">Impegno</div>
-        </div>
 
         <div class="icona-item">
-            <img src="images/attenzione.jpg" alt="Attenzione">
-            <div class="overlay-testo">Attenzione</div>
+
+            <img src="images/inizio.jpg" alt="Inizio">
+
+            <div class="overlay-testo">Impegno</div>
+
         </div>
+
+
+
+        <div class="icona-item">
+
+            <img src="images/attenzione.jpg" alt="Attenzione">
+
+            <div class="overlay-testo">Attenzione</div>
+
+        </div>
+
     </div>
+
 </section>
 
 
-    <section id="su di noi">
-        <div class="descrizione-lavoro">
-        <h3>La nostra Storia</h3>
-        <p>Le nostre terre sono coltivate da noi da ben 3 generazioni</p>
-    </div>
-    </section>
+
+
+
+   
+
+
 
     <section id="posizione">
+
         <h3>Dove trovarci</h3>
+
         <div class="mappa-container">
-            <iframe src="https://www.google.com/maps/embed?..." width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d50974.81833532307!2d14.412224075070643!3d37.01155822972364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scontrada%20mogghi%20acate!5e0!3m2!1sit!2sit!4v1776735091664!5m2!1sit!2sit" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+
         </div>
+
     </section>
 
+
+
         <section id="contatti">
-            <h2>Contatti</h2>
-            <div class="contatti-container">
-                <div class="contatto-item">
-                    <span>📞</span>
-                    <p>Titolare Cannata Gaetano</p>
-                    <p>+39 360 9446899</p>
-                    <p>Responsabile commerciale: Cannata Rosario</p>
-                    <p>+39 331 2167179</p>
-                </div>
-                <div class="contatto-item">
-                    <span>📧mail <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fe5805ef" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 12 2 2 4-4"></path></svg>Pec</span>
-                    <p>info@cannataagricola.it</p>
-                    <p>gaetanocannata@pec.it</p>
-                </div>
-                <div class="contatto-item">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-insta"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>instagram</span>
-                    <p>gaetanocannata@pec.it</p>
-                </div>
-                <div class="contatto-item">
-                    <span><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#0077b5"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>linkedin</span>
-                    <p>aziendaagricolacannata</p>
-                </div>
-            </div>
-        </section>
-        </main>
-<footer>
-    <div id="footer-legal-bar">
-        <div class="legal-info">
-            <strong>Azienda Agricola Cannata di Gaetano Cannata</strong><br>
-            Sede Legale: Via delle Coltivazioni, 123 - 97019 Vittoria (RG)<br>
-            P.IVA: 01234567890 | PEC: aziendaagricolacannata@pec.it
-        </div>
-        <div class="legal-links">
-            <p>© 2026 Tutti i diritti riservati</p>
-            <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
-        </div>
+
+        <div class="titolo-sezione">
+        <span>Sempre reperibili</span>
+        <h2>Contatti</h2>
     </div>
+
+    <div class="contatti-container">
+        <div class="contatto-card">
+            <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAElUlEQVR4nO1ZS4gcVRQ9dzRCxJgPKi5ExY2Kn0UwKBrd6MZfJMbxF2HqvhobY+IH4lZmoREiEt0oroLxg7qRuApE3AZ3xmg0o1HiLqJm/KAzfV9nntyqW21Np2uqZ7rKbrAP1Kbf97x337mfBkYYYYS+EcZxTovxiDj60Ds6Lo7+9o5CHZ+kc+saH7QcHta1+2cAwDMe8Ew/1LXxHr7vfYz7+7mFs7yjV3ITfi6M7XMOV4ZxrKzklLqvu3JuAldJjB3e0eH2+kwvhymMLXnCjIQ4mm1GmFzWJH0iTGFMGA1hmsvILGkC77AlIyERbsWAIQ63/UsGm3sapI8rsUtHoenwOIYE4vCEmdnxngSgFeEhG3B4EOZUBN2Ld3RE99aKMY4yCNP7qVnhqcX6zU7gcs/0mmf6SphOCdMJcXguAISaIA7PJHtjeq+0s2ea1s5zMa4u6tNiPFjkS4TxLGpCcxLX2KM/VtpZmP7UzuFJnNe9HRuFydvJvN2MsD5sw9pWjEftt79mGVfUQSQ4rLI1/ijtnJ1sYTvTIevzamebOHrH1O6TukzMl+yvp46prpMXptOhgXPPaG/gAmH6OZmjH2/8XxCxqz1dNF4dWHYrGFYiCnH0e/KGJrAGXRAmcLGRPYlhJuJNyyXChm7tzQjXmbJ81+eeayeyNyESY0dBexZovoFhJtJksJnOgc620MBqcTSThDcR1lew7/qIhBjrxFFT1SswLlwwlnGnjf8MNcFXRUQhTB+bF39+we8Rbrbb+rGyzK5eIthoGz6l5tQtsCt6Q0NFRKF+wvruRg7eYZP5kZngcBmGnwhuSLy8o5ZM4qaFbfSRzXOkyN8MDRGFZ9plPmM6H7JoEKnhfZtMhTfj6yCSZJNMX5gp7deCRbttEpdkZITpNy1cZAKg0uyZ3tTqjDj6SRx9qrFZ6CHQrIWIQqsq4uiXbk5QbyZnZomaqTQXlX6E6WBZClAbkUx2s0RLHKbOnBObspvLhEAjAE2UNDazSkkSNWs+o5lg0e3USiQZx9isD9/ezOt5M8uVdm70Ee4KW3F+53h1rmL5jPmonQMhkiNjN0P7u+UsZWg5bLWbOTEwIjkzS98M03SnNJchNLDaiPw6UCKZAOTUTM1tdz4CWAwSYYMdwpcDJ5KT5l3tQoWjGRWC8BguWmycML1re9gzFEQ6IoCDOYnVnP+A1s309FWitZ++J+9oT6ZcoYFL+9qfllqSVNZhVVVkknlj3KICoClAkR/xRlSrnd3mULXrvRxkBTrV+CqJtDezDWstOdur7yirASQmyHRII+uisU2Ha43wN6ULZTZaZ8VwuRDGTntv+0o7a4E4U41OpzZIhPSPp6PpjWBL+YAGVnhH39qtbMeQQBhP5yLtFT0N8hHuE0fz6cPE7bXvsmw/jDuSOoGjec+4Z4mD6SWzx6ZK5SDMLEzhbA0ghUnskb+4nEnGEoemp5Be6df6/0czxvVVZ30L1p3AGl1D19I17TDnPdMLfRXGfYx7M0keyMd0zDvcXc0pqQCkke0+VY6sCFfHJ+ncR4XpLV1TzasSEiOM8D/HP8NZAYdiKSFzAAAAAElFTkSuQmCC" alt="apple-phone"></div>
+
+            <p><strong>Titolare:</strong> <a href="tel:+393609446899">Gaetano Cannata</a></p>
+
+            <p><strong>Comm.:</strong> <a href="tel:+393312167179">Rosario Cannata</a></p>
+        </div>
+
+
+
+        <div class="contatto-card">
+            <div class="icon"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAADO0lEQVR4nO2ZzU4UQRDH/yXiBfSkoq8gvoP6AkaNmBhJtHrJKhsV9QU4CepjqOh7aPQOi4CIMUblTvDAdhPb1EzPwq67M707Hzsm+08m4aOnu35d3dU11cBQQw2VWnYKx/YZN7SiN4ZpQyv6bRTZPB4tfcsYTEsypoydngCAqeCaUfQ1L8M9ni3DuNq/F+ZxxDC9aHbItKwZD/cY5+w0xjKZpU7jTmOsMYNJrTBnFK0cGv+Z2NRzhxGEZtrTFdztq5OUsvM4ohmzYkME089yCiEYF3Kz1N+ei00YhSteL8nmivaEeAIlkVaoOa98sVWMJr4gkSLaE4NYTt1kpzBimOqhbbiOJGmmt2EYxAOUTJrxyC3514mNDdNnaSzRCSVTYwaTbrVsJDbWTLvS2NYwjpLJKhx3HtlNbBzFbZRUxte+bg1dNHuumbbzPs010y+jaLFTepIaRA6jwtMTpoXMQdo8sW6rOIuMZadxuhliQ89s+9rn75GDWXKxnOoycGYQFUwYptWWMWLsSA1iGacOJXOZeKbNE+v2Ns7kDhIMnCFMJwh42pEaJCuYFgimtQiiUJC0MHEQhYP0C5MEMRCQXmF8IAYH0hb/u4XmIBoxrR06j1ZkErKyI93Sap3hevSzVvQtqIJUMCEA+4ybmum7a7dsFH2KgzGFbvY2CPnd/e1jTOrxzlZxMjgAY2BMYeG3A0Tzf1WMaoV7RtEHSbm1oh2j6H3jDmbsPI52PM3bYMxADsQuG9ZHwYR06MsUnqKkgIiLeiZvkNySxnCprraMkQeI+9ixWXoiwTNWM/3wte8fxczE4gA+rJ7m9am72OaZXB6t6KdA5PKpWxYZX/tKXQ66hRPOYzv/d4FO4XwvBbqlkBpzKJm0whMXzV76F7ElZShfEXvVu4jtotNWSI5ZlES6gvtugje9rhVEcmfnXLgnlyy5W5lkj8IlraihFf0xCpd7e9lVFoNbK4WauBYFy05hRDwhEN0qj76XoQdlUqa63E9IaT/P0GxrGJfopBmPoz0ReIJpIdWelTs7ue4qPD1RzWez5+XUdZaqGJVIITdFkjBGh2Yu6QnTrnzXa0WvZEzvjT3UUEMhTn8BiBcL3/Gty9wAAAAASUVORK5CYII=" alt="apple-mail"></div>
+            <p><a href="mailto:Gcannata@aziendaagricolacannata.com">Gcannata@aziendaagricolacannata.com</a></p>
+        </div>
+
+        <div class="contatto-card">
+            <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEwUlEQVR4nO1ZaYhcRRD+SqPxDBI1oiAeETyIBwFR8UICakCN13qw685UvbieUWNEf8mqqESQgMKKeKG/gj9EiaCooChqougfRdCIt3hrDG6cedVjWupNv7czu7OzM29nZw/2g2aHed01/fWr+qq6FpjHPOYxj3lMB5yQnwsDc44IZincnCVS6sdSzDKU+rF0DBFl+lMZZ2CWQBmnqNCvDYNdmcoVwVWY4XCMS5RpR2PVYhoKZP5TxlrMUChjre0x7PuxhsGugluzSUxP+EEswAyB78GujunR5LCFdjrGPU1Vy0W4VIX+DQte8gPYa9pJFLCHCj2fuT/j6pbkV1fjVBX6LTz70Ec4aNpIXIP9HdO7mSAJzmorjyTSxvR5cLOvyxGO7SoDAKUIRzmhrWGPX5ULOCZXQvQRFjuhd8Jp/KWMs7vCAEm8nqZMv4eD/MD3YcmkMrtfg4XKtDHETFwR9HZBXi9XoVI4wBebxWlbJYoHyFRitGJMBbRWOYUe8YPYpeO1Viy4VplceN1P+wHs1mF5HUoPSxl3TmnR6IpYlWZVZXrd92LRpEnciH1U6OVAolRhXNGV6leLOFmZfglrP/FFHJqbxAAOdkwfBRJ/aITTu1rGx0UsV6FKeDPfxYJlbdsQLLO1gUTFbLZrY1JE4iKOd0xfprVZ+Pu3E6xofQNYUV0zYsMJbW337eYmUiniShUaDus+LguOrpPnCIUJbUQo2NxAYqPZcELPOME57ZDIRcQKSCf0cFbyCz3ne7DniDzT+kyehe5tJJuJMgndF+aY8q23tXVzerHIKlyLGxOVRFiSz7jNC/YdbVOZ3rLasLU8wjhQmd4MJ6jKuKnRPI1wXSbPQu85wUW21oZ9dkzvBxvO5tauLTGOdEIbUndrNMKzDTa3bn9rsHBCIolCCX0fDP00kaqYe6jQj00284PNsbdjt7yQaLfUxIlXoTdcEef5Avaz4SKcn3w3YsPmbrG1ZsNsNSUSCyQtFawCNalsRmKUe6wLG0zdY7MKbk/dQ4W21REUGlamZ+MCThrPbhzhBLsnqdD2UWu3NSTie7C7Y3o8m8w0ZN+hg0iD3Qk95RgX2J0DLcJcyTFWOqEnU5EZQ8QLDsl8WagUM6JOEqghkrwRu2/kteH7sCRNpPVX3SLOVKGfgx9+mydBtQq7X9jvmLvktREXsTzNPzXtINxiipQGmx/AAZhCZMHLWJnXhitiVTj0V+vbQVV9fyhRgSnGSNcG6/LbQHK1MEmubdD9U4nQgy6hwugLh/dKXhuOaXN1/7gsI1JmHIcuwmqq5N4hNJxHEX2ExVZoWnJNwiBv9dsJJElNyOfxBK3mKfOk11Jj00ZEGTekybaddX4QC1Tom+QQ0hbveKXElA6mL6yo9H3Y27ozIehbbqBbbktTRHbdnhYiNiJcmLwVwV2B3Ket9AAsgaZtolauDF2DlSZO6LOqgmGw6VyAlOmFQPztiTosXUfMONF6uppUtbh4vHnKuDtI9vZSAYdjJsIqC1f1+x1OcO6Y5xFuDnK9c8b/D8cxPRDIlFVwvblSuFXen94qrYGH2QDH9GBNtbHJ8kRaPqngDswmVBj9NQ2OJCa6WT51FKXVOMK6jza84LCJFvwPVnXWUybd8vIAAAAASUVORK5CYII=" alt="secure-mail"></div>
+            <p><a href="mailto:gaetanocannata@pec.it">gaetanocannata@pec.it</a></p>
+        </div>
+
+
+        <div class="contatto-card">
+
+            <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEMUlEQVR4nO1ZzY8UVRD/VQK6BvmQ43JVwXgQv25+xJvERPTACUJ31YyTaOJJBT1xAL0SjUcJ/gOiiSddVPSG3l3Bi4pXQVldtuvptqm3r8fJsr3zerp7e0zml3QymX6v3quu7ypghhm6x4pgvwpOKtNFJ7SoQn86obyJJ9BaVKEFZZxY6eP+xhlQwWMq9EVTl45mjumi9vFobQbyAbY7ofdVaDUQ/s0JfeAEz5t08mPY0ciXsrOOYYfRdCkOO6Zz4SyT1Kpjei8/hW2TEX4Z9yjTl4GBvxzT6fwodjV18bHnH8UuJ3RGhZYL6eQJ9lQjMsD2QpVU6FdTLXSEjPGQMv3k1Y3p6/wI7ojebOoUmPglF8yjY+SCeWW6Fmzn3SqGvWrqlAkexpQgS/GIqZky/WO/x24Yeiem05gyOKa3g6YsbLrQe43gnbbSsAs4wXPeJk2NGIfWv88H2K1M1+2OKynuKyVkwS5I41zbl97wfB7agbfPjdY4pvNr7/FGOSGhBU8oxeE2L1yPEbwYtObzUkKO6YoXW430wOJPxmAV+sQx/WCph08/7DfTx/bO1pRc8pAxY0y4Hp7dTP2NXukllOmmLcoFOyszcAR3aYq3lOn3iLzqhjLezBPMVT5HsDNI5GbpouKgCYjPO6bvRnKkz7IU/SKN8elHggP2n6nECFPfThKn3Lh7TsKID1amCkHcynhi3B5N8WShxpMEXdc0I6ZOhSSU6asquZDZiRO6FD7A5Spq5ppmxGwi7FmsnNAVzAwlg5OdMBKyY2/YMepUBmU8XTiAvMSbtcqIudHCsFETRfz6u4dkyxmxmGBrM0YPNZEJXgof5aMtZ2QYPAX7URPmmscGuRYlsuSD5yu4GzVhNIJElv7fjKyVtWbwf8Ssn6nWpsaeoo+aUMagM2PP/nO/5el0JELDrxv36wOi0I0QlZ+qcO91Z+KZYUBM4rKD9lIUpiuxUXmDfOvq2Iqv9aQxwZyl4mHfpSrM5D3sdULfTEXSeFsaL3TVcifEqBPTj1OTxq8rrC6PVIDWUR+s9PCAxRl77Lf9Vxj2UBJtFFZap9RNMOdHDsEBRJS6J/JXcWc7pS430HxIsMfcqApd8PMOpqWQBdjs44K9m6R2qdZ86LgdFIORdlB5+WDi7rJBFwNl+jAUc69Nbct0HKJbpoYRr3IGUwbH9E50VWozOz9WEFqOat9vEXRt3HHLjxUSHIzaZDO7wPm1/Dj2oWPkx7FvpC98Nn7jKWwrVMy3+VM8jo6QJTioTD8XgbbyUNR8/QgzyzZkMWNr7cbrzx9gt9mEqVNRLkwcf4x7m9mZXgZi19fmE3jBqromytzhWZbGJDjg4wTT+cI7hbPPTjyeHkXWx4Mq9Om41KPpR4UWWnE45rutbggddZ9+NHZpo8X0vblWFbx+q4d7G2dghhlQGf8CSUDbDw42QlsAAAAASUVORK5CYII=" alt="instagram-new--v1"></div>
+
+
+            <p><a href="https://instagram.com/aziendaagricola_cannata" target="_blank">aziendaagricola_cannata</a></p>
+            
+
+        </div>
+
+
+
+        <div class="contatto-card">
+
+            <div class="icon"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC0UlEQVR4nO1az2sTQRh9n79AUdve2nrwJHrQU0XQuydFT9GDYHa+hGA9txE8WMHiRelF/wKPgnoTBCtiEUQPelJQ8KBYUKRUK5p8Ezsym1lIarMdY2ImuA/2kJmXnfd2Zr6ZnW+BDBkytAWtcFSYZoXpm2YyvbxE0ZLVohlH/swE03SvxetWl6JL3j3hnkJFGBOmhBH0GKaEEWFMWk11Qx49I4oexEYYEwgMolCua6NZDzItWbLJYxiBweQx7EbL1zXJyVhEoNC++v4LI8I4KEx3hemjKJoXRXeqjL3dENw1I25dqf0W45l+SBFj6BsjTC9c3bTJY9CcxVYb093ku98t4R03Ikxf4mhWwpakzJzCdu8oElCPPHQr62VTwkBsQuGi4z/plvDO90gRY8L0fZV9kN0B7Ec/Ra1KhF2i6IYwvRNFH/oyaoUC3YE58jhlVzrnwzElbKxFOCmKbomi9/GwVLToIuLVSh57/oWR1O21D0czvUqrF0VaM82YKWzoupG0cq+HoOhlNULRMHaaHDYZxjaJcEgzXRemqltkb5sprAvOSLz6My2LwoVWAmNeAQeE6VO9d1AOzkitgFxN4UTy2+SwvmX7BRx2w2zRrlVBGYnF5zGoFV0Tps9O6LxWdMUOrZVcUXSvPsRwJigjdlujmZ43TOqfDXPmmclhcyO/yogc72ZQRoRx3tW9rkbYZ6OSnQ9a0dvV5kOFsduZfBOUEfvU63U41lQe4bj7z9PGclPCQDJPgjIiihZsuRnHUJPgcQw5wQtN5QC5MLwclJG0xv+mvVRkRpAZMZmRNGRGkBkxmZE0rHWDVpcvp537dtrIXEqDj3w57dy3o0ZCgfbVZ48/LTGElNtKmNPYYbXZ41ushXr2NH47m0RgEMY579SbTTTG5PjMCWXDGEWPYRij1kRyyuKdpk7SBX2dnk5gXccfDLjkaF9+MJAhQwYk+AXmIE0O2KURqAAAAABJRU5ErkJggg==" alt="linkedin"></div>
+
+
+            <p><a href="#" target="_blank">Azienda Agricola Cannata</a></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+        </main>
+
+<footer>
+
+    <div id="footer-legal-bar">
+
+        <div class="legal-info">
+
+            <strong>Azienda Agricola Cannata di Gaetano Cannata</strong><br>
+
+            Sede Legale: Via Pietro Nenni, 18 - 97019 Vittoria (RG)<br>
+
+            P.IVA: 01234567890 | PEC: gaetanocannata@pec.it
+
+        </div>
+
+        <div class="legal-links">
+
+            <p>© 2026 Tutti i diritti riservati</p>
+
+            <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
+
+        </div>
+
+    </div>
+
 </footer>
 
+
+
         <script src="java.js"></script>
+
     </body>
+
 </html>
