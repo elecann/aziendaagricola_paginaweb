@@ -107,3 +107,18 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+function mostraNascondiFormati(bottone) {
+    // Trova il div "lista-formati" che si trova subito dopo il bottone
+    var lista = bottone.nextElementSibling;
+    
+    // Controlla se la lista ha già la classe "visibile"
+    if (lista.classList.contains("visibile")) {
+        // Se è visibile, nascondila e rimetti il testo originale
+        lista.classList.remove("visibile");
+        bottone.innerText = "Formati e Stagionalità";
+    } else {
+        // Se è nascosta, mostrala e cambia il testo del bottone
+        lista.classList.add("visibile");
+        bottone.innerText = "Nascondi Formati";
+    }
+}

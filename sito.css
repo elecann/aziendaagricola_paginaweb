@@ -8,7 +8,7 @@
 body {
     font-family: emoji, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #2C332A; /* Antracite-Oliva invece del grigio base */
     position: relative;
     background-color: #fff;
 }
@@ -17,7 +17,8 @@ body {
 header {
     position: relative;
     text-align: center;
-    height: 40vh;
+    height: 90vh; /* Mantenuto 90vh come nel tuo file originale */
+    background-color: #1E392A; /* Verde scuro mentre carica l'immagine */
 }
 
 #header {
@@ -28,9 +29,8 @@ header {
 }
 
 h1 {
-    color: #fe5805ef;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -40,9 +40,48 @@ h1 {
     z-index: 2;
 }
 
+#logo-centrale {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    z-index: 2;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.6));
+    opacity: 0;
+    animation: comparsaLogo 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+#logo-scritta {
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    z-index: 3;
+    animation: comparsaLogo 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    color: #eee;
+    font-family: initial;
+}
+
+@keyframes comparsaLogo {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -40%) scale(0.85);
+        filter: drop-shadow(0px 0px 0px rgba(0,0,0,0)) blur(4px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.6)) blur(0px);
+    }
+}
+
+/* Navbar pulita e sistemata con i nuovi colori */
 #navbar {
-    background-color: rgba(255, 255, 255, 0.8);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(252, 248, 237, 0.95); /* Crema trasparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 2px solid #2E7D32; /* Linea verde istituzionale */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     position: sticky;
     top: 0;
@@ -51,19 +90,32 @@ h1 {
 
 #navbar ul {
     list-style: none;
-    padding: 10px;
+    padding: 20px 10px 1px 40px;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
+    align-items: center;
 }
 
 #navbar li {
-    margin: 0 20px;
+    
+    animation: comparsaLogo 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
 #navbar a {
     text-decoration: none;
-    color: #fe5805ef;
+    color: #2C332A; /* Grigio-verde scuro */
     font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+#navbar a:hover {
+    color: #D32F2F; /* Rosso Cannata */
+    border-bottom: 2px solid #D32F2F;
 }
 
 /* --- 3. MENU DROPDOWN (HAMBURGER) --- */
@@ -71,12 +123,12 @@ h1 {
     position: fixed;
     top: 15px;
     right: 15px;
-    z-index: 3000; /* Z-index alto per stare sopra la galleria */
-    display: none; /* Appare con lo scroll via JS */
+    z-index: 3000;
+    display: none;
 }
 
 .tendina {
-    background-color: #fe5805ef;
+    background-color: #D32F2F; /* Rosso Cannata */
     color: white;
     padding: 10px;
     border-radius: 10px;
@@ -88,7 +140,7 @@ h1 {
     display: none;
     position: absolute;
     right: 0;
-    background-color: #f9f9f9;
+    background-color: #FCF8ED;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -99,17 +151,18 @@ h1 {
 }
 
 .dropdown-content a {
-    color: black;
+    color: #2C332A;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-bottom: none !important;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #EDF2EC;
+    color: #D32F2F;
 }
 
-/* Logica Scroll (Classi applicate da JS) */
 body.scrolled #navbar {
     transform: translateY(-100%);
 }
@@ -121,37 +174,33 @@ body.show-menu #dropdown {
 /* --- 4. CONTENUTI PRINCIPALI (PROFILO E TESTI) --- */
 #profilo {
     border-radius: 50%;
-    border: 4px solid #fe5805ef;
-    /* Aumentiamo il primo valore (80px) per spingerla più in basso rispetto alla navbar */
+    border: 6px solid #2E7D32; /* Sostituito l'oro con il verde del logo per eleganza */
     margin: 80px auto 20px auto; 
     display: block;
     max-width: 220px;
-    width: 45%;
-    height: auto;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    /* Assicuriamoci che non venga coperta da altri elementi */
     position: relative;
     z-index: 1;
 }
 
 .titolo-sezione {
     text-align: center;
-    margin-top: 20px; /* Avviciniamo il titolo alla foto */
+    margin-top: 20px;
     margin-bottom: 25px;
 }
 
 .titolo-sezione span {
     display: block;
-    color: #fe5805ef; /* Arancione navbar */
+    color: #D32F2F; /* Rosso Cannata */
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     letter-spacing: 3px;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
-#storia h3 {
-    color: #333; /* Grigio antracite per eleganza */
+#storia h3, .titolo-sezione h3 {
+    color: #2C332A;
     font-size: 2.2rem;
     font-weight: 800;
     margin: 0;
@@ -167,6 +216,7 @@ body.show-menu #dropdown {
     line-height: 1.8;
     font-size: 1.05rem;
 }
+
 /* --- 5. GALLERIA 3D --- */
 #gallery-container {
     position: relative;
@@ -224,7 +274,7 @@ body.show-menu #dropdown {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(254, 88, 5, 0.7);
+    background-color: rgba(211, 47, 47, 0.7); /* Rosso semitrasparente */
     color: white;
     border: none;
     cursor: pointer;
@@ -236,21 +286,22 @@ body.show-menu #dropdown {
 }
 
 .gallery-btn:hover {
-    background-color: #fe5805ef;
+    background-color: #D32F2F;
     transform: translateY(-50%) scale(1.1);
 }
 
 #prev-btn { left: 20px; }
 #next-btn { right: 20px; }
 
-/* --- 6. PRODOTTI --- */
 
+/* --- 6. PRODOTTI E SCHEDE TECNICHE --- */
 #prodotti {
-    padding: 5px 30px;
+    background-color: #FCF8ED; /* Sfondo Crema aggiunto */
+    padding: 40px 30px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: inset 0 4px 15px rgba(0,0,0,0.03);
 }
 
 .scheda-prodotto {
@@ -259,9 +310,11 @@ body.show-menu #dropdown {
     max-width: 900px;
     margin: 0 auto;
     gap: 30px;
-    background-color: #fdf5e6;
+    background-color: #FFFFFF; /* Sfondo Bianco pulito */
+    border: 1px solid #F1EFE9;
     padding: 20px;
     border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .prodotto {
@@ -280,33 +333,138 @@ body.show-menu #dropdown {
 .descrizione-prodotto { flex: 1; }
 
 .descrizione-prodotto h3 { 
-    color: #fe5805ef; 
+    color: #D32F2F; /* Rosso Cannata */
     margin-bottom: 10px; 
 }
 
-/* --- 7. TITOLI E SEZIONI (STORIA, IMPEGNO, CONTATTI) --- */
-.titolo-sezione span {
+/* Stile del bottone formati */
+.btn-formati {
+    background-color: #D32F2F;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+}
+
+.btn-formati:hover {
+    background-color: #B71C1C; /* Rosso più scuro */
+    transform: scale(1.05);
+}
+
+.lista-formati {
+    display: none; 
+    margin-top: 10px;
+    padding: 15px;
+    background-color: white;
+    border-left: 4px solid #D32F2F;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.lista-formati ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lista-formati li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.lista-formati li:last-child {
+    border-bottom: none;
+}
+
+.lista-formati.visibile {
     display: block;
-    color: #fe5805ef;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Calendari singoli dentro la lista formati */
+.scheda-tecnica {
+    border-top: 2px solid #000;
+    margin-top: 20px;
+    padding-top: 15px;
+    width: 100%;
+}
+
+.dati-flex {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.dato-box {
+    flex: 1;
+}
+
+.dato-box:nth-child(2) {
+    border-left: 1px solid #ccc;
+    padding-left: 20px;
+}
+
+.dato-label, .calendario-label {
+    color: #D32F2F; 
+    font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     margin-bottom: 5px;
+    display: block;
 }
 
-.titolo-sezione h3 {
-    font-size: 2.2rem;
-    font-weight: 800;
-    color: #222;
+.dato-valore {
+    font-size: 1.2rem;
+    color: #333;
 }
 
+.calendario-mesi {
+    display: flex;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+.mese {
+    flex: 1;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-right: 1px solid #fff;
+}
+
+.mese:last-child {
+    border-right: none;
+}
+
+.mese.pieno {
+    background-color: #fae6e1; 
+    color: #000;
+}
+
+.mese.vuoto {
+    background-color: #f9f9f9;
+    color: #ccc; 
+}
+
+
+/* --- 7. TITOLI E SEZIONI VARI --- */
 #contatti h2, #impegno h3, #posizione h3 {
     font-size: 2rem;
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 30px;
-    color: #333;
+    color: #2C332A;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -318,22 +476,21 @@ body.show-menu #dropdown {
     bottom: 0;
     width: 60px;
     height: 5px;
-    background-color: #fe5805ef;
+    background-color: #D32F2F; /* Rosso Cannata */
     border-radius: 2px;
 }
 
 #contatti h2 {
-    border-left: 8px solid #fe5805ef;
+    border-left: 8px solid #D32F2F;
     padding-left: 15px;
     line-height: 1;
-    font-size: 2rem;
-    color: #333;
     display: inline-block;
 }
 
 
 /* --- 8. IMPEGNO (LAVORO) --- */
 #impegno {
+    background-color: #EDF2EC; /* Sfondo Verde Salvia Chiarissimo */
     padding: 60px 20px;
     text-align: center;
 }
@@ -401,7 +558,7 @@ body.show-menu #dropdown {
 }
 
 .contatto-card h3 {
-    color: #ff6600;
+    color: #2E7D32; /* Verde Cannata */
     margin-bottom: 15px;
     font-size: 1.4rem;
 }
@@ -419,22 +576,26 @@ body.show-menu #dropdown {
 }
 
 .contatto-card a:hover {
-    color: #ff6600;
+    color: #D32F2F; /* Rosso Cannata su hover */
 }
 
 .icon {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #2E7D32;
 }
 
 /* --- 10. POSIZIONE E FOOTER --- */
-#posizione { padding: 60px 20px; text-align: center; background-color: #f9f9f9; }
+#posizione { padding: 60px 20px; text-align: center; background-color: #fff; }
 .mappa-container { max-width: 1000px; margin: 0 auto; border-radius: 15px; overflow: hidden; border: 5px solid white; }
 
 footer { width: 100%; margin-top: 40px; }
 #footer-wave { width: 100%; display: block; }
+
 #footer-legal-bar {
-    background-color: #fe5805ef; color: white; padding: 40px 20px;
+    background-color: #1E392A; /* Verde Terra Scuro Istituzionale */
+    color: white; 
+    padding: 40px 20px;
     display: flex; justify-content: space-between; align-items: center;
     font-size: 0.85rem; flex-wrap: wrap; gap: 20px;
 }
@@ -443,114 +604,130 @@ footer { width: 100%; margin-top: 40px; }
 
 /* --- 11. MEDIA QUERIES (MOBILE - RE-STYLE) --- */
 @media (max-width: 768px) {
+    html, body {
+        font-family: unset;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    #logo-centrale {
+        width: 50%; 
+    }
+
+    #testo {
+        line-height: 1.4;
+        font-display: initial;
+        font-family: serif;
+        padding: 23px;
+        margin-bottom: 0%;
+    }
+
+   
+
+    #navbar ul {
+        padding-left: 15%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap; /* Forza gli elementi a stare su una sola riga */
+        overflow-x: auto; /* Permette di scorrere la barra col dito sugli schermi più piccoli */
+    }
+
+    #navbar li {
+        margin: 0 5px; /* Spazio ridotto tra le parole per farle entrare */
+    }
+
+    #navbar a {
+        font-size: 0.65rem; /* Testo più piccolo proporzionato al mobile */
+        font-weight: bold;
+        white-space: nowrap; /* Impedisce categoricamente al testo di andare a capo */
+    }
     
-body {
-    font-family:unset;
-}
-#testo{
-    line-height: 1.4;
-    font-display:initial;
-    font-family:serif;
-    padding:23px;
-    margin-bottom: 0%;
-}
-/* --- 2. HEADER E NAVBAR PRINCIPALE --- */
-header {
-    height: 50%;
-}
-
-#navbar ul {
-    padding: 10px;
-}
-
-#navbar li {
-    margin: 0 7px;
-}
-
-#navbar a {
-    font-weight:normal ;
-}
-
-    /* 2. Profilo: Ridotto per non "affogare" la storia */
     #profilo { 
         width: 150px; 
         margin: 50px auto 15px auto; 
     }
 
-    /* 3. Hamburger Menu: "Mega" ma con stile */
-    /* Usiamo l'ID per essere sicuri che lo prenda */
+    #dropdown { 
+        top: 20px; 
+        right: 10px; 
+    }
+
     #dropdown .tendina {
-        padding: 15px 15px !important; /* Largo ma non troppo alto */
-       
+        padding: 15px 15px !important; 
         border-radius: 15px;
     }
-     #dropdown { top: 20px; right: 10x; }
-
-     /* --- 2. MODIFICA GALLERY (COMPATTA) --- */
+     
     #gallery-container {
-        width: 100%; /* Più stretta per non occupare tutto lo schermo */
-        height: 320px;    /* Altezza ridotta rispetto al desktop */
+        width: 100%; 
+        height: 320px;    
         margin: 10px 0px;
     }
 
     .singolo {
-        width: 90%;       /* L'immagine attiva occupa bene il centro */
-        height: 60%;    /* Altezza proporzionata */
+        width: 90%;       
+        height: 60%;    
         border-radius: 12px;
     }
 
-    /* Effetto 3D semplificato: nascondiamo le laterali per pulizia visiva */
     .singolo.prev, .singolo.next {
         display: none; 
     }
 
     .singolo.active {
-        
         transform: translateX(-50%) scale(1.05);
-        opacity: 1;
-        filter: brightness(1) blur(0px);
     }
 
     .gallery-btn {
         padding: 10px;
         font-size: 12px;
-
     }
 
-
     .scheda-prodotto { 
-        flex-direction:column !important; /* Forza l'immagine a stare a lato */
+        flex-direction: column !important; 
         align-items: center;
         gap: 15px;
         padding: 15px;
         margin-bottom: 15px;
-        text-align: left; /* Testo a sinistra accanto alla foto */
+        text-align: left; 
     }
 
     .prodotto { 
-        width: 200px !important; /* Dimensione ridotta per stare a lato */
+        width: 200px !important; 
         height: 240px !important; 
-        object-fit:cover;
         border-radius: 10px;
-        /* Impedisce alla foto di rimpicciolirsi troppo */
     }
 
     .descrizione-prodotto h3 {
         font-size: 1.5rem;
         margin-bottom: 5px;
-        text-align:center;
+        text-align: center;
     }
 
     .descrizione-prodotto p {
         font-size: 0.9rem;
         line-height: 1.4;
-        text-align:center;
+        text-align: center;
+    }
+    
+    .btn-formati {
+        display: block;               
+        margin: 15px auto 0 auto;     
+        padding: 6px 14px;            
+        font-size: 0.85rem;           
+        width: fit-content;           
     }
 
-     /* 3. CONTATTI: A due a due (Due Colonne) */
+    .lista-formati {
+        text-align: left;
+    }
+    
     .contatti-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr) !important; /* Due colonne */
+        grid-template-columns: repeat(2, 1fr) !important; 
         gap: 4px;
         padding: 10px;
     }
@@ -560,21 +737,20 @@ header {
         border-radius: 12px;
     }
 
-   
-
     .contatto-card p {
         font-size: 0.6rem;
     }
+
     .icon img {
         width: 32px;
         height: 32px;
+        color:#B71C1C
     }
 
-    /* 4. Numeri di Telefono con BORDATURA ARANCIONE */
     .contatto-card a[href^="tel"] {
         display: block;
-        border: 2px solid #fe5805ef; /* La bordatura che ti piace */
-        color: #fe5805ef;
+        border: 2px solid #2E7D32; /* Verde Cannata al posto dell'arancione */
+        color: #2E7D32;
         padding: 5px;
         border-radius: 6px;
         margin-top: 5px;
@@ -583,22 +759,28 @@ header {
         text-decoration: none;
     }
 
-    /* 5. Sezione Impegno (Già ti piaceva, la manteniamo compatta) */
     .icona-item {
         width: 160px !important; 
         height: 160px !important;
     }
     
     .icone-impegno-container { gap: 15px; }
-
-    /* Titoli sezioni rimpiccioliti */
+    .icon img {
+    width: 45px; height: 45px; object-fit: contain;     /* Assicura che l'icona sia perfettamente centrata */
+}
+.icona-da-ingrandire {
+    transform: scale(1.5); /* Questo fa uno zoom del 50% sul disegno per compensare lo spazio vuoto */
+}
     #contatti h2, #impegno h3, #storia h3, #posizione h3, #prodotti h3 {
         font-size: 1.5rem;
         margin-bottom: 15px;
     }
-
     
-    /* 7. Footer */
+    /* Adattamento calendari mobile */
+    .mese { font-size: 0.6rem; padding: 6px 0; }
+    .dato-valore { font-size: 1rem; }
+    .dato-label, .calendario-label { font-size: 0.65rem; }
+    
     #footer-legal-bar { 
         padding: 30px 15px;
         font-size: 0.8rem;
