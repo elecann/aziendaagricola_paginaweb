@@ -628,7 +628,8 @@ footer { width: 100%; margin-top: 40px; }
 
     #navbar ul {
         flex-shrink: 0;
-        padding: 6% 0% 0% 7%;
+        padding: 6% 0% 0% 10%;
+        padding-left: 24%;
     }
 
     #navbar li {
