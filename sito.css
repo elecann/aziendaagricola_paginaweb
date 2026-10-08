@@ -615,7 +615,7 @@ footer { width: 100%; margin-top: 40px; }
     }
 
     #logo-centrale {
-        width: 50%; 
+        width: 80%; 
     }
 
     #testo {
@@ -626,18 +626,14 @@ footer { width: 100%; margin-top: 40px; }
         margin-bottom: 0%;
     }
 
-   
-
     #navbar ul {
-        padding-left: 15%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap; /* Forza gli elementi a stare su una sola riga */
-        overflow-x: auto; /* Permette di scorrere la barra col dito sugli schermi più piccoli */
+        flex-shrink: 0;
+        padding: 20px 10px 0px 25px;
     }
 
     #navbar li {
-        margin: 0 5px; /* Spazio ridotto tra le parole per farle entrare */
+        margin: 0 9px; /* Spazio ridotto tra le parole per farle entrare */
+        
     }
 
     #navbar a {
@@ -648,7 +644,7 @@ footer { width: 100%; margin-top: 40px; }
     
     #profilo { 
         width: 150px; 
-        margin: 50px auto 15px auto; 
+        margin: 70px auto 0px;
     }
 
     #dropdown { 
